@@ -1,0 +1,43 @@
+Colloquium Website Bug Report
+
+Bug 1
+Type: Real Bug
+File: index.html
+Description: About page link points to abut.html instead of about.html
+Impact: Navigation breaks and page does not open
+
+Bug 2
+Type: Real Bug
+File: contact.html
+Description: Incorrect CSS file name styles.css linked
+Impact: Contact page loads without styling
+
+Bug 3
+Type: Real Bug
+File: contact.html
+Description: Submit button has incorrect type attribute
+Impact: Form does not submit
+
+Bug 4
+Type: Real Bug
+File: style.css
+Description: Missing closing brace in CSS rule
+Impact: Browser stops reading CSS properly
+
+Bug 5
+Type: Fake Bug
+File: index.html
+Description: Extra spaces inside heading tag
+Impact: No functional or visual issue
+
+Bug 6
+Type: Fake Bug
+File: about.html
+Description: Inline CSS used instead of external CSS
+Impact: Works correctly but poor practice
+
+Bug 7
+Type: Fake Bug
+File: style.css
+Description: Unused CSS class defined
+Impact: No effect on website
