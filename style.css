@@ -1,0 +1,145 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    background: linear-gradient(180deg, #f8fafc, #eef2f7);
+    color: #1f2937;
+}
+
+/* ===== Navbar ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 16px 0;
+    background-color: #0f172a;
+}
+
+nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+    color: #38bdf8;
+}
+
+/* ===== Home Section ===== */
+.main {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.main h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #020617;
+}
+
+.main p {
+    font-size: 18px;
+    color: #475569;
+    max-width: 620px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.main button {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #38bdf8;
+    color: #020617;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main button:hover {
+    background-color: #0ea5e9;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ===== About & Contact Pages ===== */
+.page {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.page p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid #cbd5f5;
+}
+
+.contact-form button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0ea5e9;
+    color: white;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 36px;
+    }
+
+    .page h1 {
+        font-size: 30px;
+    }
+}
+.unused-class {
+    border: 2px solid red;
+}
+
+.page h1 {
+    color: #020617;
+
