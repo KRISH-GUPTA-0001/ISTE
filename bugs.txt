@@ -41,3 +41,66 @@ Type: Fake Bug
 File: style.css
 Description: Unused CSS class defined
 Impact: No effect on website
+
+Bug 8
+Type: Real Bug
+Category: CSS Specificity Conflict
+File: style.css
+Description: General button styles override scoped styles on different pages
+Impact: Inconsistent UI appearance
+
+Bug 9
+Type: Fake Bug
+Category: Layout Technique
+Description: Usage of viewport units for centering layout
+Impact: No functional issue
+
+Bug 8
+Type: Fake Bug
+Category: UX Preference
+Description: Center-aligned navigation links
+Impact: Design choice only
+
+BUGS IN JAVASCRIPT [REAL AND FAKE]:
+
+Bug 1
+Type: Real Bug
+File: script.js
+Category: Runtime Error
+Description: Event listener added to a null element
+Impact: JavaScript stops executing on pages without the button
+
+Bug 2
+Type: Real Bug
+File: script.js
+Category: DOM Selection
+Description: Incorrect class selector for contact form
+Impact: Form validation does not execute
+
+Bug 3
+Type: Real Bug
+File: script.js
+Category: Logical Error
+Description: Assignment operator used instead of comparison
+Impact: Validation condition behaves incorrectly
+
+Bug 4
+Type: Fake Bug
+File: script.js
+Category: Code Style
+Description: Loose equality operator used
+Impact: No functional issue
+
+Bug 5
+Type: Fake Bug
+File: script.js
+Category: Optimization
+Description: Redundant variable reassignment
+Impact: Minor inefficiency only
+
+Bug 6
+Type: Fake Bug
+File: script.js
+Category: Maintainability
+Description: Unused helper function
+Impact: No effect on execution
