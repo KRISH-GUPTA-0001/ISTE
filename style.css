@@ -67,8 +67,6 @@ nav a.active {
     padding: 12px 30px;
     font-size: 16px;
     font-weight: 600;
-    background-color: #38bdf8;
-    color: #020617;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -152,6 +150,9 @@ nav a.active {
 }
 .main {
     min-height: calc(100vh - 60px);
+}
+nav {
+    justify-content: center;
 }
 
 
