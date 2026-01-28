@@ -1,4 +1,4 @@
-/* ===== Vintage Film Reset ===== */
+/* ===== Vintage Film Base (Correct Theme) ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,181 +6,100 @@
     font-family: "Georgia", "Times New Roman", serif;
 }
 
-/* ===== Body (Old Film Paper Look) ===== */
+/* BUG 1 (Subtle): Body background overridden later */
 body {
-    background:
-        radial-gradient(circle at top, rgba(255,255,255,0.35), rgba(0,0,0,0.15)),
-        linear-gradient(180deg, #f3e9d2, #e6d5b8);
-    color: #2b2b2b;
+    background: linear-gradient(180deg, #f3e9d2, #e6d5b8);
+    color: #3a2f1d;
 }
 
-/* ===== Film Grain Overlay ===== */
+/* ===== Film Grain (Correct but heavy) ===== */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image:
+    background:
         repeating-linear-gradient(
             0deg,
-            rgba(0,0,0,0.03),
-            rgba(0,0,0,0.03) 1px,
+            rgba(0,0,0,0.04),
+            rgba(0,0,0,0.04) 1px,
             transparent 1px,
             transparent 2px
         );
-    pointer-events: none;
     z-index: 999;
+    pointer-events: none;
 }
 
-/* ===== Navbar (Cinema Strip Feel) ===== */
+/* ===== Navbar ===== */
 nav {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     padding: 18px 0;
     background: linear-gradient(180deg, #2b2b2b, #1a1a1a);
     border-bottom: 4px solid #a68b5b;
 }
 
+/* BUG 2: Anchor color overridden later */
 nav a {
     color: #e8dcc5;
     text-decoration: none;
-    font-size: 17px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    position: relative;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background-color: #c4a46b;
-    transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 /* ===== Home Section ===== */
 .main {
-    min-height: calc(100vh - 70px);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
 }
 
+/* BUG 3: Font-size collapse on some screens */
 .main h1 {
-    font-size: 52px;
+    font-size: clamp(10px, 2vw, 52px);
     letter-spacing: 3px;
-    margin-bottom: 20px;
-    color: #3a2f1d;
-    text-shadow: 1px 1px 0 #cbb58b;
-}
-
-.main p {
-    font-size: 18px;
-    max-width: 650px;
-    line-height: 1.8;
-    color: #4b3f2a;
-    margin-bottom: 35px;
 }
 
 /* ===== Vintage Button ===== */
 .main button {
     padding: 14px 36px;
-    font-size: 15px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     background: linear-gradient(180deg, #c4a46b, #a38752);
     border: 2px solid #6e5733;
-    border-radius: 0;
-    cursor: pointer;
     color: #2b2b2b;
-    box-shadow: 4px 4px 0 #6e5733;
 }
 
+/* BUG 4: Invisible hover text */
 .main button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #6e5733;
+    color: transparent;
 }
 
-/* ===== Inner Pages ===== */
+/* ===== Page Card ===== */
 .page {
-    max-width: 820px;
-    margin: 70px auto;
+    background: rgba(255, 248, 230, 0.8);
+    border: 2px solid #bfa77a;
     padding: 30px;
-    background: rgba(255, 248, 230, 0.75);
-    border: 2px solid #bfa77a;
-    box-shadow: 6px 6px 0 #8c7548;
+    margin: 60px auto;
+    max-width: 820px;
 }
 
-.page h1 {
-    font-size: 38px;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-    color: #3a2f1d;
+/* BUG 5: Accidental override */
+.page {
+    background: transparent;
 }
 
-.page p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #4b3f2a;
-    margin-bottom: 16px;
-}
+/* ===== Media Query (Nested Bug Trap) ===== */
+@media (max-width: 900px) {
 
-/* ===== Contact Form ===== */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    font-size: 15px;
-    border: 2px solid #bfa77a;
-    background-color: #fff8e6;
-    font-family: "Georgia", serif;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #8c7548;
-}
-
-.contact-form button {
-    margin-top: 10px;
-    padding: 12px;
-    font-size: 15px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: linear-gradient(180deg, #c4a46b, #a38752);
-    border: 2px solid #6e5733;
-    cursor: pointer;
-    box-shadow: 4px 4px 0 #6e5733;
-}
-
-.contact-form button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #6e5733;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-    .main h1 {
-        font-size: 38px;
+    /* BUG 6: Entire site shrinks */
+    body {
+        font-size: 10px;
     }
 
-    nav {
-        gap: 25px;
+    /* BUG 7: Navbar becomes unreadable */
+    nav a {
+        color: #1a1a1a;
     }
 }

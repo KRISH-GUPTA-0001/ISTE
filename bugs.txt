@@ -1,0 +1,106 @@
+1. HTML Bugs
+Bug H1: Incorrect CSS File Reference
+Description: The CSS file name is written with incorrect capitalization.
+Type: File path / case-sensitivity bug.
+Impact: Stylesheet fails to load on case-sensitive systems.
+Difficulty Level: Medium (environment-dependent).
+
+Bug H2: Broken Navigation Link
+Description: The Home page link does not include the .html extension.
+Type: Navigation / routing bug.
+Impact: Clicking the link results in page not found.
+Difficulty Level: Easy.
+
+Bug H3: Button ID Mismatch
+Description: The button ID in HTML does not match the ID used in JavaScript.
+Type: DOM reference bug.
+Impact: JavaScript event listener does not attach.
+Difficulty Level: Medium.
+
+Bug H4: Improper Script Execution Timing
+Description: JavaScript accesses DOM elements before ensuring DOM readiness.
+Type: DOM loading bug.
+Impact: JavaScript selectors return null.
+Difficulty Level: Medium.
+
+2. CSS Bugs (Theme-Consistent) 
+
+Bug C1: Cascading Background Override
+Description: Body background is unintentionally overridden due to CSS cascade.
+Type: Cascading / override bug.
+Impact: Vintage background disappears under certain conditions.
+Difficulty Level: Medium.
+
+Bug C2: Navigation Text Color Conflict
+Description: Navbar link color is overridden inside a media query.
+Type: Specificity / responsive bug.
+Impact: Navigation links become unreadable on smaller screens.
+Difficulty Level: Medium.
+
+Bug C3: Collapsing Heading Font Size
+Description: Incorrect use of clamp() causes heading text to shrink excessively.
+Type: Responsive typography bug.
+Impact: Heading becomes too small on some screen sizes.
+Difficulty Level: Medium.
+
+Bug C4: Invisible Button Text on Hover
+Description: Button text color becomes transparent when hovered.
+Type: UI interaction bug.
+Impact: Button appears broken during hover.
+Difficulty Level: Easy.
+
+Bug C5: Duplicate Selector Override
+Description: .page class is defined twice, overriding the background style.
+Type: CSS override bug.
+Impact: Page card loses its vintage background appearance.
+Difficulty Level: Medium.
+
+Bug C6: Global Font Shrink on Mobile
+Description: Body font size is drastically reduced inside a media query.
+Type: Responsive layout bug.
+Impact: Entire website becomes difficult to read on small screens.
+Difficulty Level: Medium.
+
+Bug C7: Low Contrast Navbar Links
+Description: Navbar text color matches background color on mobile devices.
+Type: Accessibility / contrast bug.
+Impact: Navigation links become invisible.
+Difficulty Level: Medium.
+
+3. JavaScript Bugs (Nested Bugs)
+
+Bug J1: Incorrect DOM Element Selection
+Description: JavaScript queries an element that does not exist due to ID mismatch.
+Type: DOM selection bug.
+Impact: Event listener is never attached.
+Difficulty Level: Medium.
+
+Bug J2: Conditional Logic Error
+Description: Event binding is wrapped in an incorrect condition.
+Type: Logical bug.
+Impact: Code executes without throwing errors but does not work.
+Difficulty Level: Hard.
+
+Bug J3: Infinite Loop on Button Click
+Description: An infinite loop executes when the button is clicked.
+Type: Runtime logic bug.
+Impact: Browser freezes after interaction.
+Difficulty Level: Hard.
+
+Bug J4: Incorrect Form Selector
+Description: JavaScript targets a non-existent form class.
+Type: DOM reference bug.
+Impact: Form submission logic crashes.
+Difficulty Level: Medium.
+
+Bug J5: Incorrect Method Name
+Description: preventDefault() is misspelled.
+Type: Syntax / runtime bug.
+Impact: Form submits and reloads unexpectedly.
+Difficulty Level: Easy.
+
+Bug J6: Invalid Input Field Reference
+Description: JavaScript attempts to read a non-existing input field.
+Type: DOM querying bug.
+Impact: JavaScript error stops further execution.
+Difficulty Level: Medium.

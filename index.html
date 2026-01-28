@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home | Colloquium Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+
+    <!-- BUG 1: Wrong CSS file name (case-sensitive issue) -->
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
+    <!-- BUG 2: Broken href (missing .html) -->
+    <a href="index">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
 </nav>
 
 <section class="main">
-    <h1>Welcome to Our Colloquium Website</h1>
-    <p>
-        This website demonstrates a clean, professional and bug-free
-        implementation using HTML, CSS and JavaScript.
-    </p>
-    <button id="startBtn">Get Started</button>
+    <h1>Welcome Back In Time</h1>
+
+    <!-- BUG 3: Button ID mismatch -->
+    <button id="startBTN">Get Started</button>
 </section>
 
+<!-- BUG 4: Script loaded before DOM finishes -->
 <script src="script.js"></script>
+
 </body>
 </html>
